@@ -154,6 +154,99 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-HTTP简述" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天来写一写HTTP。<br>说起HTTP，其中Server和Client是我们必须要提到的。<br>Server就是服务器电脑里面运行的软件(即代码)，Client是客户端(谷歌浏览器或者ie浏览器等)。</p>
+<ul>
+<li>浏览器负责发起请求</li>
+<li>服务器在80端口接收请求</li>
+<li>服务器负责返回内容(响应)</li>
+<li>浏览器负责下载响应内容<br><strong>HTTP的作用就是指导浏览器和服务器如何进行沟通。</strong><h4 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h4></li>
+<li>请求的格式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">1 动词 路径 协议/版本</div><div class="line">2 Key1: value1</div><div class="line">2 Key2: value2</div><div class="line">2 Key3: value3</div><div class="line">2 Content-Type: application/x-www-form-urlencoded</div><div class="line">2 Host: www.baidu.com</div><div class="line">2 User-Agent: curl/7.54.0</div><div class="line">3</div><div class="line">4 要上传的数据</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>请求最多包含四部分，最少包含三部分。(也就是说第四部分可以为空)</li>
+<li>第三部分永远都是一个回车(<code>\n</code>)</li>
+<li>动词有GET POST PUT PATCH DELETE HEAD OPTIONS 等</li>
+<li>这里的路径包括「查询参数」，但不包括「锚点」</li>
+<li>如果你没有写路径，那么路径默认为/</li>
+<li>第2部分中的Content-Type标注了第4部分的格式</li>
+</ol>
+<h5 id="用curl创造一个请求，并得到响应"><a href="#用curl创造一个请求，并得到响应" class="headerlink" title="用curl创造一个请求，并得到响应"></a>用curl创造一个请求，并得到响应</h5><p><img src="https://upload-images.jianshu.io/upload_images/3753845-d86a92d411b68b44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3753845-26de5918f37955a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="请求内容"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1 GET / HTTP / 1.1</div><div class="line"> 1.1 GET: 获取根目录</div><div class="line"> 1.2 HTTP： 协议</div><div class="line">  1.3 1.1： 版本号</div><div class="line">2 Host: www.baidu.com</div><div class="line">3 User-Agent: curl/7.54.1</div><div class="line">  3.1 User-Agent: 表示用的什么软件发起请求</div><div class="line">4 Accept: */*  表示我接受你返回给我的任何内容</div></pre></td></tr></table></figure></p>
+<h4 id="用Chrome发请求"><a href="#用Chrome发请求" class="headerlink" title="用Chrome发请求"></a>用Chrome发请求</h4><ol>
+<li>打开Network</li>
+<li>地址栏输入网址</li>
+<li>在Network点击，查看request，点击「view source」</li>
+<li>点击「view source」</li>
+<li>点击「view source」</li>
+<li>点击「view source」</li>
+<li>终于点了？可以看到请求的前三部分了</li>
+<li>如果有请求的第四部分，那么在FormData或Playload里面可以看到<br>如图：</li>
+</ol>
+<ul>
+<li>右键，点检查，可以找到Network.<br><img src="https://upload-images.jianshu.io/upload_images/3753845-1ec4e4fbf6773f9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+<li>地址栏输入网址并回车<br><img src="https://upload-images.jianshu.io/upload_images/3753845-ed317a222a8ae610.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+<li>点开GET，可以看到GET请求是怎样的。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-be44e4f0af12431a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-e65e0dc9be00ebfd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+</ul>
+<h4 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h4><p>请求了之后，应该都能得到一个响应，除非断网了，或者服务器宕机了。</p>
+<h5 id="响应示例"><a href="#响应示例" class="headerlink" title="响应示例"></a>响应示例</h5><p>上面发送的一个请求，对应的响应：<br><img src="https://upload-images.jianshu.io/upload_images/3753845-174f33345c208a55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h5 id="响应的格式"><a href="#响应的格式" class="headerlink" title="响应的格式"></a>响应的格式</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1 协议/版本号 状态码 状态解释</div><div class="line">2 Key1: value1</div><div class="line">2 Key2: value2</div><div class="line">2 Content-Length: 17931</div><div class="line">2 Content-Type: text/html</div><div class="line">3</div><div class="line">4 要下载的内容</div></pre></td></tr></table></figure>
+<h5 id="用Chrome查看响应"><a href="#用Chrome查看响应" class="headerlink" title="用Chrome查看响应"></a>用Chrome查看响应</h5><ol>
+<li>打开Network</li>
+<li>输入网址</li>
+<li>选中第一个响应</li>
+<li>查看Response Headers，点击「view source</li>
+<li>你会看到响应的前两部分</li>
+<li>查看Response或者Preview,你会看到响应的第四部分<br>同上，右键，点击检查，点Network,在地址栏输入网址，<br><img src="https://upload-images.jianshu.io/upload_images/3753845-a9d7cb419db8506c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-c271154fff65b096.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-425adfe14b13e9a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-ffe863a51dca422f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-07d35456c16970dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>即第一部分和第二部分在Headers里面，第四部分在Response里面，第三部分是回车，不显示。</li>
+</ol>
+<p><strong>文章著作权归irwenjing所有，转载须说明来源</strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/26/HTTP简述/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Git使用尝试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

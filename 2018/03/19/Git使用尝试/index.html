@@ -6,21 +6,37 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>hexo搭建github博客 | irwenjing&#39;s blog</title>
+  <title>irwenjing&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="倒腾了好久才用hexo加github搭建好属于自己的博客，好激动，为此写篇博客记录一下。要使用hexo的话，需在你的系统中支持node.js和git。 安装node.js安装git安装Hexo123456789101112131415161. $ npm install -g hexo-cli     //全局安装hexo-cli2. $ hexo init my-blog          //">
+  <meta name="description" content="Git使用尝试 新建项目来操作说明： 先在github上新建一个项目，然后把它拉下来，在本地去操作，把文件添加上去后再push上去。   打开你的github,点击New,如下图： 创建新项目，取名称为test,点上Public和Initialize this repository with a README,最后点击Create repository,新项目就创建好了。  点击完Create r">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo搭建github博客">
-<meta property="og:url" content="http://yoursite.com/2018/03/16/hexo搭建github博客/index.html">
+<meta property="og:title" content="irwenjing's blog">
+<meta property="og:url" content="http://yoursite.com/2018/03/19/Git使用尝试/index.html">
 <meta property="og:site_name" content="irwenjing's blog">
-<meta property="og:description" content="倒腾了好久才用hexo加github搭建好属于自己的博客，好激动，为此写篇博客记录一下。要使用hexo的话，需在你的系统中支持node.js和git。 安装node.js安装git安装Hexo123456789101112131415161. $ npm install -g hexo-cli     //全局安装hexo-cli2. $ hexo init my-blog          //">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-c0a7ff149490af52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-03-16T15:43:39.163Z">
+<meta property="og:description" content="Git使用尝试 新建项目来操作说明： 先在github上新建一个项目，然后把它拉下来，在本地去操作，把文件添加上去后再push上去。   打开你的github,点击New,如下图： 创建新项目，取名称为test,点上Public和Initialize this repository with a README,最后点击Create repository,新项目就创建好了。  点击完Create r">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-910ce8df7b3aff60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-ce3e446b5173b6cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-0b0a8c95ef36e01f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-ec4282ac7c1e805f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-abb76d30a79e5561.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-c30ccfa9dcf64164.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-ecc9bc00cedd3f92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-3e1b7f080cc3bb51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-8d4b22b854a29c6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-a6aaf36c0b87b6a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-39f6cbd02c94c770.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-dbc579f2182c4f4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-8e002aca00658f18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-42f3916efc8d684b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-054a97bd72ee0e29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-5b3037b459b255da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-008be6a1867ef09a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-03-19T09:34:55.521Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo搭建github博客">
-<meta name="twitter:description" content="倒腾了好久才用hexo加github搭建好属于自己的博客，好激动，为此写篇博客记录一下。要使用hexo的话，需在你的系统中支持node.js和git。 安装node.js安装git安装Hexo123456789101112131415161. $ npm install -g hexo-cli     //全局安装hexo-cli2. $ hexo init my-blog          //">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/3753845-c0a7ff149490af52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="irwenjing's blog">
+<meta name="twitter:description" content="Git使用尝试 新建项目来操作说明： 先在github上新建一个项目，然后把它拉下来，在本地去操作，把文件添加上去后再push上去。   打开你的github,点击New,如下图： 创建新项目，取名称为test,点上Public和Initialize this repository with a README,最后点击Create repository,新项目就创建好了。  点击完Create r">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/3753845-910ce8df7b3aff60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="irwenjing&#39;s blog" type="application/atom+xml">
   
@@ -156,42 +172,38 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo搭建github博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Git使用尝试" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      hexo搭建github博客
-    </h1>
-  
-
-        
-        <a href="/2018/03/16/hexo搭建github博客/" class="archive-article-date">
-  	<time datetime="2018-03-16T03:43:08.629Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-16</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>倒腾了好久才用hexo加github搭建好属于自己的博客，好激动，为此写篇博客记录一下。<br>要使用hexo的话，需在你的系统中支持node.js和git。</p>
-<h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a><a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">安装node.js</a></h4><h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a><a href="https://git-scm.com/" target="_blank" rel="external">安装git</a></h4><h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">安装Hexo</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">1. $ npm install -g hexo-cli     //全局安装hexo-cli</div><div class="line">2. $ hexo init my-blog          //创建一个hexo框架</div><div class="line">3. $ cd my-blog                 //进入目录</div><div class="line">4. $ npm install                //安装依赖包</div><div class="line">5. $ hexo generate              //生成静态文件</div><div class="line">6. $ hexo server               //启动本地服务，可以通过http://locallhost:4000/ 访问</div><div class="line"></div><div class="line">特别提示：</div><div class="line">a. hexo generate(可以简写成 hexo g)生成静态文件，会在当前目录下生成一个新的为public的文件夹。</div><div class="line">b. hexo server (可以简写成hexo s)启动本地web服务，可以在本地预览博客。</div><div class="line">c. hexo deploy(可以简写成hexo d)部署博客到远程(如github)。</div><div class="line">d. hexo new post-name(可简写成hexo n post-name,新建文章)</div><div class="line">e. hexo new page page-name(可简写成hexo n page page-name,新建页面)</div><div class="line">常用组合命令：</div><div class="line">a. hexo d -g  (生成和部署)</div><div class="line">b. hexo s -g   (生成和预览)</div></pre></td></tr></table></figure>
-<p>新建完成后，指定文件夹的目录如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">|—— _config.yml             // 网站的配置信息</div><div class="line">|—— package.json            // 项目包信息</div><div class="line">|—— scaffolds               // 模板文件夹，Hexo根据scaffold中的模板来新建文件</div><div class="line">|—— source                  // 存放用户资源的地方</div><div class="line">|   |—— _drafts             // 存放草稿</div><div class="line">|   |—— _posts              // 存放文章</div><div class="line">|—— themes                  // 主题文件夹</div></pre></td></tr></table></figure></p>
-<p><strong>_config.yml</strong><br>网站的<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">配置</a>信息，可以在此配置大部分的参数。<br>例如：<br>到这里，你就可以用四步骤在本地预览到自己的博客了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1.把markdown文章放到_posts文件夹。</div><div class="line">2. $ hexo clean       //清除缓存文件db.json和已生成的静态文件public.</div><div class="line">3. $hexo g              //生成静态文件，存放到当前一个新生成文件夹public里面。</div><div class="line">4. $hexo s          //用浏览器访问http://localhost:4000,就可以在本地预览到自己的博客。</div></pre></td></tr></table></figure></p>
-<h4 id="发布到github上面"><a href="#发布到github上面" class="headerlink" title="发布到github上面"></a>发布到github上面</h4><p><strong>打开你的github创建repository</strong><br>repository相当于一个仓库，用来放置你的代码文件。登录进入github，并进入个人页面，选择repositories，然后New一个repository。创建时，只需要填写Repository name即可。<em>注意：格式必须为username.github.io</em>。</p>
-<p><strong>将本地博客部署到GitHub Pages</strong><br>GitHub Pages用于介绍托管在GitHub的项目的，每个账号只能创建一个repository来存放GitHub Pages,再次强调仓库名格式必须是username.github.io,这是固定的命名约定。</p>
-<p>创建后，可以通过<a href="http://username.github.io来访问个人主页。" target="_blank" rel="external">http://username.github.io来访问个人主页。</a><br><em>GitHub Pages中个人主页的内容是在master分支下的。部署Hexo到GitHub Pages指的就是将<code>hexo -g</code>生成的静态文件推送到GitHub Pages对应的仓库中。</em></p>
-<p>先修改你的_config.yml文件，一个正确的部署至少要有type参数。注意，hexo的配置文件中任何’:’后面都是带一个空格的。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">    type: git</div></pre></td></tr></table></figure></p>
-<p>发布到git上需要安装<code>hexo-deployer-git插件</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<p>然后修改配置，即_config.yml文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">    type: git</div><div class="line">    repo: https://github.com/username/username.github.io.git</div><div class="line">    branch: master</div></pre></td></tr></table></figure></p>
-<p>配置完成之后就可以执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
-<p>这样就可以把你写的博客，推送到github上了。</p>
-<p>但是由于我是第一次搭建，我想熟悉部署到github上的每一个过程，所以目前我没有使用<code>hexo d</code> 这个命令，而是用下面的方法把博客部署到github上的。<br>步骤如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">1.把markdown文章放到_posts文件夹。</div><div class="line">2. $ hexo clean       //清除缓存文件db.json和已生成的静态文件public.</div><div class="line">  2.1. $hexo g              //生成静态文件，存放到当前一个新生成文件夹public里面。</div><div class="line">  2.2. $hexo s          //用浏览器访问http://localhost:4000,就可以在本地预览到自己的博客。本地预览没有问题之后 ctrl+c.</div><div class="line">3. cd username.github.io/     //cd 到你的git仓库文件夹，将刚刚生成的html复制(copy)到这个文件夹中。如下图cp -r ../../public/*  </div><div class="line"> 3.1 cp代表拷贝(cope的缩写)， -r代表连带着目录文件夹一起复制。</div><div class="line">4. 在username.github.io的git仓库文件夹中提交到github中。</div><div class="line">  4.1 git add .</div><div class="line">  4.2 git commit</div><div class="line">  4.3 git push origin master</div><div class="line">  4.4 git pull origin master</div></pre></td></tr></table></figure>
-<p>这样我就把自己的博客部署到github上了。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/3753845-c0a7ff149490af52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+        <h3 id="Git使用尝试"><a href="#Git使用尝试" class="headerlink" title="Git使用尝试"></a>Git使用尝试</h3><ol>
+<li>新建项目来操作<br>说明： 先在github上新建一个项目，然后把它拉下来，在本地去操作，把文件添加上去后再push上去。</li>
+</ol>
+<ul>
+<li>打开你的github,点击New,如下图：<br><img src="https://upload-images.jianshu.io/upload_images/3753845-910ce8df7b3aff60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="新建项目.png"></li>
+<li><p>创建新项目，取名称为test,点上Public和Initialize this repository with a README,最后点击Create repository,新项目就创建好了。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-ce3e446b5173b6cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</li>
+<li><p>点击完Create repository 按钮后，就会进入到如下页面(选择使用Use SSH 协议)，其中里面的README.md的作用是，当你打开github项目之后，你会发现下面有一些介绍说明，这些介绍是github自动读取README.md,并把它里面的文件自动转化成markdown文档。便于别人理解你的代码用途。：<br><img src="https://upload-images.jianshu.io/upload_images/3753845-0b0a8c95ef36e01f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</li>
+<li><p>选择使用Use SSH后，点击复制下面：<br><img src="https://upload-images.jianshu.io/upload_images/3753845-ec4282ac7c1e805f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</li>
+<li>打开终端，git clone,克隆下面地址(把建好的仓库完整的下载到你的本地)<br><img src="https://upload-images.jianshu.io/upload_images/3753845-abb76d30a79e5561.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+<li><p>出现报错，因为我们没有设置公钥。我们需要在本地创建公钥和私钥对，把创建好的公钥拷贝到github的设置里面，私钥在自己的电脑里面。这个时候我们才会有权限。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-c30ccfa9dcf64164.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</li>
+<li><p>设置公钥，先找到Settings(如图Settings)，点击去找到SSH and GPG keys(如图2).再点击去找到图三中的generating SSH keys,再点击去，找到图4，再点击去（图5），复制到终端.</p>
+</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/3753845-ecc9bc00cedd3f92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Settings.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-3e1b7f080cc3bb51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图2.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-8d4b22b854a29c6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-a6aaf36c0b87b6a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图4.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-39f6cbd02c94c770.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图5.png"></p>
+<ul>
+<li>复制到终端上后，把下面邮箱修改成自己的邮箱。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-dbc579f2182c4f4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+<li>通过命令ssh-keygen -t rsa -C ‘’youremail@example.com’’之后一路回车即可在c:\Users\Administrator.ssh目录下生成两个文件id-rsa, id-rsa.pub。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-8e002aca00658f18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+<li>复制id_rsa.pub中的全部内容，添加到账户-&gt;SSH公钥页面中，钥名可以随意起名字。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-42f3916efc8d684b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/3753845-054a97bd72ee0e29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<ul>
+<li>拷贝完成后，就可以去clone了。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-5b3037b459b255da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-008be6a1867ef09a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+</ul>
 <p><strong>文章著作权归irwenjing所有，转载须说明来源</strong></p>
 
       
@@ -223,17 +235,6 @@
       
       
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/hexo-markdown//" class="article-tag-list-link color4">hexo markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -283,7 +284,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/03/16/hexo搭建github博客/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/03/19/Git使用尝试/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -297,17 +298,17 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/14/Hexo Documentation/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/03/19/命令行简单使用/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hexo Getting Started
+          (no title)
         
       </div>
     </a>
   
   
-    <a href="/2018/03/19/命令行简单使用/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/03/26/HTTP简述/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
@@ -339,8 +340,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2018/03/16/hexo搭建github博客/", 
-    sourceId: "hexo搭建github博客",
+    url: "http://yoursite.com/2018/03/19/Git使用尝试/", 
+    sourceId: "Git使用尝试",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
