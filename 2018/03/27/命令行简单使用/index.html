@@ -6,37 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Git 入门使用 | irwenjing&#39;s blog</title>
+  <title>命令行简单使用 | irwenjing&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git使用尝试 新建项目来操作说明： 先在github上新建一个项目，然后把它拉下来，在本地去操作，把文件添加上去后再push上去。   打开你的github,点击New,如下图： 创建新项目，取名称为test,点上Public和Initialize this repository with a README,最后点击Create repository,新项目就创建好了。  点击完Create r">
+  <meta name="description" content="今天这篇博客就简单说一说ls、mv、touch、cat这几个命令如何使用，以及如何使用explainshell.com这个网站。先列出来含义：    操作 命令     查看路径 ls 路径   移动节点 mv 源路径 目标路径   创建文件 touch 文件名   一次显示整个文件 cat   filename    进入linux，进行操作以上命令，熟悉它们的意义，如下图： 关于explain">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git 入门使用">
-<meta property="og:url" content="http://yoursite.com/2018/03/27/Git入门使用/index.html">
+<meta property="og:title" content="命令行简单使用">
+<meta property="og:url" content="http://yoursite.com/2018/03/27/命令行简单使用/index.html">
 <meta property="og:site_name" content="irwenjing's blog">
-<meta property="og:description" content="Git使用尝试 新建项目来操作说明： 先在github上新建一个项目，然后把它拉下来，在本地去操作，把文件添加上去后再push上去。   打开你的github,点击New,如下图： 创建新项目，取名称为test,点上Public和Initialize this repository with a README,最后点击Create repository,新项目就创建好了。  点击完Create r">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-910ce8df7b3aff60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-ce3e446b5173b6cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-0b0a8c95ef36e01f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-ec4282ac7c1e805f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-abb76d30a79e5561.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-c30ccfa9dcf64164.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-ecc9bc00cedd3f92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-3e1b7f080cc3bb51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-8d4b22b854a29c6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-a6aaf36c0b87b6a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-39f6cbd02c94c770.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-dbc579f2182c4f4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-8e002aca00658f18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-42f3916efc8d684b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-054a97bd72ee0e29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-5b3037b459b255da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-008be6a1867ef09a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-03-27T05:50:43.188Z">
+<meta property="og:description" content="今天这篇博客就简单说一说ls、mv、touch、cat这几个命令如何使用，以及如何使用explainshell.com这个网站。先列出来含义：    操作 命令     查看路径 ls 路径   移动节点 mv 源路径 目标路径   创建文件 touch 文件名   一次显示整个文件 cat   filename    进入linux，进行操作以上命令，熟悉它们的意义，如下图： 关于explain">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-278bf4bdd303224a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-9c38652ce4b41077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-03-27T06:03:30.819Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git 入门使用">
-<meta name="twitter:description" content="Git使用尝试 新建项目来操作说明： 先在github上新建一个项目，然后把它拉下来，在本地去操作，把文件添加上去后再push上去。   打开你的github,点击New,如下图： 创建新项目，取名称为test,点上Public和Initialize this repository with a README,最后点击Create repository,新项目就创建好了。  点击完Create r">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/3753845-910ce8df7b3aff60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="命令行简单使用">
+<meta name="twitter:description" content="今天这篇博客就简单说一说ls、mv、touch、cat这几个命令如何使用，以及如何使用explainshell.com这个网站。先列出来含义：    操作 命令     查看路径 ls 路径   移动节点 mv 源路径 目标路径   创建文件 touch 文件名   一次显示整个文件 cat   filename    进入linux，进行操作以上命令，熟悉它们的意义，如下图： 关于explain">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/3753845-278bf4bdd303224a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="irwenjing&#39;s blog" type="application/atom+xml">
   
@@ -172,52 +157,56 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Git入门使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-命令行简单使用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Git 入门使用
+      命令行简单使用
     </h1>
   
 
         
-        <a href="/2018/03/27/Git入门使用/" class="archive-article-date">
-  	<time datetime="2018-03-27T05:51:33.940Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-27</time>
+        <a href="/2018/03/27/命令行简单使用/" class="archive-article-date">
+  	<time datetime="2018-03-27T06:04:11.638Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Git使用尝试"><a href="#Git使用尝试" class="headerlink" title="Git使用尝试"></a>Git使用尝试</h3><ol>
-<li>新建项目来操作<br>说明： 先在github上新建一个项目，然后把它拉下来，在本地去操作，把文件添加上去后再push上去。</li>
-</ol>
-<ul>
-<li>打开你的github,点击New,如下图：<br><img src="https://upload-images.jianshu.io/upload_images/3753845-910ce8df7b3aff60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="新建项目.png"></li>
-<li><p>创建新项目，取名称为test,点上Public和Initialize this repository with a README,最后点击Create repository,新项目就创建好了。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-ce3e446b5173b6cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-</li>
-<li><p>点击完Create repository 按钮后，就会进入到如下页面(选择使用Use SSH 协议)，其中里面的README.md的作用是，当你打开github项目之后，你会发现下面有一些介绍说明，这些介绍是github自动读取README.md,并把它里面的文件自动转化成markdown文档。便于别人理解你的代码用途。：<br><img src="https://upload-images.jianshu.io/upload_images/3753845-0b0a8c95ef36e01f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-</li>
-<li><p>选择使用Use SSH后，点击复制下面：<br><img src="https://upload-images.jianshu.io/upload_images/3753845-ec4282ac7c1e805f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-</li>
-<li>打开终端，git clone,克隆下面地址(把建好的仓库完整的下载到你的本地)<br><img src="https://upload-images.jianshu.io/upload_images/3753845-abb76d30a79e5561.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
-<li><p>出现报错，因为我们没有设置公钥。我们需要在本地创建公钥和私钥对，把创建好的公钥拷贝到github的设置里面，私钥在自己的电脑里面。这个时候我们才会有权限。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-c30ccfa9dcf64164.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-</li>
-<li><p>设置公钥，先找到Settings(如图Settings)，点击去找到SSH and GPG keys(如图2).再点击去找到图三中的generating SSH keys,再点击去，找到图4，再点击去（图5），复制到终端.</p>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/3753845-ecc9bc00cedd3f92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Settings.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-3e1b7f080cc3bb51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图2.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-8d4b22b854a29c6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-a6aaf36c0b87b6a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图4.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-39f6cbd02c94c770.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图5.png"></p>
-<ul>
-<li>复制到终端上后，把下面邮箱修改成自己的邮箱。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-dbc579f2182c4f4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
-<li>通过命令ssh-keygen -t rsa -C ‘’youremail@example.com’’之后一路回车即可在c:\Users\Administrator.ssh目录下生成两个文件id-rsa, id-rsa.pub。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-8e002aca00658f18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
-<li>复制id_rsa.pub中的全部内容，添加到账户-&gt;SSH公钥页面中，钥名可以随意起名字。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-42f3916efc8d684b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/3753845-054a97bd72ee0e29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<ul>
-<li>拷贝完成后，就可以去clone了。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-5b3037b459b255da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/3753845-008be6a1867ef09a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+        <p>今天这篇博客就简单说一说ls、mv、touch、cat这几个命令如何使用，以及如何使用explainshell.com这个网站。<br>先列出来含义：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th style="text-align:center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看路径</td>
+<td style="text-align:center">ls 路径</td>
+</tr>
+<tr>
+<td>移动节点</td>
+<td style="text-align:center">mv 源路径 目标路径</td>
+</tr>
+<tr>
+<td>创建文件</td>
+<td style="text-align:center">touch 文件名</td>
+</tr>
+<tr>
+<td>一次显示整个文件</td>
+<td style="text-align:center">cat   filename</td>
+</tr>
+</tbody>
+</table>
+<p>进入linux，进行操作以上命令，熟悉它们的意义，如下图：<br><img src="https://upload-images.jianshu.io/upload_images/3753845-278bf4bdd303224a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h4 id="关于explainshell-com这个网站的使用"><a href="#关于explainshell-com这个网站的使用" class="headerlink" title="关于explainshell.com这个网站的使用"></a>关于explainshell.com这个网站的使用</h4><ul>
+<li>命令行释义： <a href="http://explainshell.com/explain?cmd=ls+-Irt" target="_blank" rel="external">http://explainshell.com/explain?cmd=ls+-Irt</a><br>点开上面网站链接，这个网站就是可以解释你不明白的任何命令。<br><img src="https://upload-images.jianshu.io/upload_images/3753845-9c38652ce4b41077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
 </ul>
 <p><strong>文章著作权归irwenjing所有，转载须说明来源</strong></p>
 
@@ -255,7 +244,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Git//" class="article-tag-list-link color4">Git</a>
+        			<a href="/categories/command//" class="article-tag-list-link color3">command</a>
         		</li>
       		
 		</ul>
@@ -310,7 +299,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/03/27/Git入门使用/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/03/27/命令行简单使用/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -324,20 +313,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/27/HTTP简述/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/03/27/Git入门使用/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          HTTP简述
+          Git 入门使用
         
       </div>
     </a>
   
-  
-    <a href="/2018/03/27/命令行简单使用/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">命令行简单使用</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -366,8 +350,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2018/03/27/Git入门使用/", 
-    sourceId: "Git入门使用",
+    url: "http://yoursite.com/2018/03/27/命令行简单使用/", 
+    sourceId: "命令行简单使用",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
