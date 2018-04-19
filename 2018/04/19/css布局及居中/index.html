@@ -6,19 +6,37 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>HTML标签 | irwenjing&#39;s blog</title>
+  <title>CSS布局及居中 | irwenjing&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HTML5标签列表 根元素  1&amp;lt;html&amp;gt;: 代表HTML或者XHTML文档的根。其他所有元素必须是这个元素的子节点。  文档元数据  123456&amp;lt;head&amp;gt;: 代表关于文档元数据的一个集合，包括脚本或样式表的链接或内容。&amp;lt;title&amp;gt;: 定义文档的标题，将显示在浏览器的标题栏或标签页上。该元素只能包含文本，包含的标签不会被解释。&amp;lt;base&amp;gt;:">
+  <meta name="description" content="双列布局(左右布局)如何实现：浮动元素+普通元素    三栏式布局(左中右布局)两侧两列固定宽度，中间列自适应宽度   12345678910111213141516171819202122232425262728 #content:after&amp;#123;    content: &amp;apos;&amp;apos;;    display: block;    clear: both;  &amp;#125;">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML标签">
-<meta property="og:url" content="http://yoursite.com/2018/04/12/HTML标签/index.html">
+<meta property="og:title" content="CSS布局及居中">
+<meta property="og:url" content="http://yoursite.com/2018/04/19/css布局及居中/index.html">
 <meta property="og:site_name" content="irwenjing's blog">
-<meta property="og:description" content="HTML5标签列表 根元素  1&amp;lt;html&amp;gt;: 代表HTML或者XHTML文档的根。其他所有元素必须是这个元素的子节点。  文档元数据  123456&amp;lt;head&amp;gt;: 代表关于文档元数据的一个集合，包括脚本或样式表的链接或内容。&amp;lt;title&amp;gt;: 定义文档的标题，将显示在浏览器的标题栏或标签页上。该元素只能包含文本，包含的标签不会被解释。&amp;lt;base&amp;gt;:">
-<meta property="og:updated_time" content="2018-04-12T14:24:31.232Z">
+<meta property="og:description" content="双列布局(左右布局)如何实现：浮动元素+普通元素    三栏式布局(左中右布局)两侧两列固定宽度，中间列自适应宽度   12345678910111213141516171819202122232425262728 #content:after&amp;#123;    content: &amp;apos;&amp;apos;;    display: block;    clear: both;  &amp;#125;">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-45e0bed3d424aa65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-65175a4ea62a048e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-c17f29309cd75adc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-d9d164b9ccc9e216.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-0487b4900f68078d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-4eb5265f9440da98.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-68b2c68333613d37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-79a64128b6c040cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-3f2edbc9fde3f99b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-4f75d390a3e035b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-0baa4d4b81dc9afe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-6e9275e950388398.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-9007365056551016.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-30b9181b68d01da3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-8b62db0c46d2ed05.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-d5c15536a8969a3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3753845-257895a05680e0b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-04-19T13:02:25.500Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML标签">
-<meta name="twitter:description" content="HTML5标签列表 根元素  1&amp;lt;html&amp;gt;: 代表HTML或者XHTML文档的根。其他所有元素必须是这个元素的子节点。  文档元数据  123456&amp;lt;head&amp;gt;: 代表关于文档元数据的一个集合，包括脚本或样式表的链接或内容。&amp;lt;title&amp;gt;: 定义文档的标题，将显示在浏览器的标题栏或标签页上。该元素只能包含文本，包含的标签不会被解释。&amp;lt;base&amp;gt;:">
+<meta name="twitter:title" content="CSS布局及居中">
+<meta name="twitter:description" content="双列布局(左右布局)如何实现：浮动元素+普通元素    三栏式布局(左中右布局)两侧两列固定宽度，中间列自适应宽度   12345678910111213141516171819202122232425262728 #content:after&amp;#123;    content: &amp;apos;&amp;apos;;    display: block;    clear: both;  &amp;#125;">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3753845-45e0bed3d424aa65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="irwenjing&#39;s blog" type="application/atom+xml">
   
@@ -154,73 +172,84 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-HTML标签" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-css布局及居中" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      HTML标签
+      CSS布局及居中
     </h1>
   
 
         
-        <a href="/2018/04/12/HTML标签/" class="archive-article-date">
-  	<time datetime="2018-04-12T14:19:23.181Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-12</time>
+        <a href="/2018/04/19/css布局及居中/" class="archive-article-date">
+  	<time datetime="2018-04-19T13:02:53.929Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="HTML5标签列表"><a href="#HTML5标签列表" class="headerlink" title="HTML5标签列表"></a>HTML5标签列表</h3><ul>
-<li><strong>根元素</strong></li>
+        <ul>
+<li><h4 id="双列布局-左右布局"><a href="#双列布局-左右布局" class="headerlink" title="双列布局(左右布局)"></a>双列布局(左右布局)</h4>如何实现：<br>浮动元素+普通元素</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;: 代表HTML或者XHTML文档的根。其他所有元素必须是这个元素的子节点。</div></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/3753845-45e0bed3d424aa65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <ul>
-<li><strong>文档元数据</strong></li>
+<li><h4 id="三栏式布局-左中右布局"><a href="#三栏式布局-左中右布局" class="headerlink" title="三栏式布局(左中右布局)"></a>三栏式布局(左中右布局)</h4>两侧两列固定宽度，中间列自适应宽度</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;: 代表关于文档元数据的一个集合，包括脚本或样式表的链接或内容。</div><div class="line">&lt;title&gt;: 定义文档的标题，将显示在浏览器的标题栏或标签页上。该元素只能包含文本，包含的标签不会被解释。</div><div class="line">&lt;base&gt;: 定义页面上相对URL的基准URL。</div><div class="line">&lt;link&gt;: 用于链接外部的CSS到该文档。</div><div class="line">&lt;meta&gt;: 定义其他HTML元素无法描述的元数据。</div><div class="line">&lt;style&gt;: 用于内联CSS。</div></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/3753845-65175a4ea62a048e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="三栏式布局"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"> #content:after&#123;</div><div class="line">    content: &apos;&apos;;</div><div class="line">    display: block;</div><div class="line">    clear: both;</div><div class="line">  &#125;</div><div class="line">  .menu&#123;</div><div class="line">    width: 100px;</div><div class="line">    height: 500px;</div><div class="line">    background: pink;</div><div class="line">    float: left;</div><div class="line">  &#125;</div><div class="line">  .aside&#123;</div><div class="line">    width: 200px;</div><div class="line">    height: 500px;</div><div class="line">    background: yellow;</div><div class="line">    float: right;</div><div class="line">  &#125;</div><div class="line">  .main&#123;</div><div class="line">    margin-left: 110px;</div><div class="line">    margin-right: 210px;</div><div class="line">    height: 400px;</div><div class="line">    background: red;</div><div class="line">  &#125;</div><div class="line">&lt;div id=&quot;content&quot;&gt;</div><div class="line">  &lt;div class=&quot;menu&quot;&gt;aside&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;aside&quot;&gt;aside&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;main&quot;&gt;content&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3753845-c17f29309cd75adc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果"></p>
 <ul>
-<li><strong>脚本</strong></li>
+<li><h4 id="圣杯布局"><a href="#圣杯布局" class="headerlink" title="圣杯布局"></a>圣杯布局</h4><ol>
+<li>是三列布局，两边固定宽度，中间自适应</li>
+<li>中间内容元素在 dom 元素次序中优先位置</li>
+</ol>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;: 定义一个内联脚本或链接到外部脚本。脚本语言是JavaScript。</div><div class="line">&lt;noscript&gt;: 定义当浏览器不支持脚本时显示的替代文字。</div><div class="line">&lt;template&gt;: 通过JavaScript在运行时实例化内容的容器。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">   #content:after&#123;</div><div class="line">     content: &apos;&apos;;        /*8*/</div><div class="line">     display: block;     /*8*/</div><div class="line">     clear: both;        /*8*/</div><div class="line">   &#125;</div><div class="line">   #content&#123;</div><div class="line">     padding-left: 100px;  /*5*/</div><div class="line">     padding-right: 150px; /*5*/</div><div class="line">   &#125;</div><div class="line">   .aside, .main, .extra&#123;</div><div class="line">     float: left;         /*2*/</div><div class="line">   &#125;</div><div class="line">   </div><div class="line">   .aside&#123;</div><div class="line">     width: 100px;        /*1*/</div><div class="line">     height: 300px;       /*1*/</div><div class="line">     background: red;     /*1*/</div><div class="line">     </div><div class="line">     margin-left: -100%;  /*4*/</div><div class="line">     position: relative;  /*6*/</div><div class="line">     left: -100px;        /*6*/</div><div class="line">   &#125;</div><div class="line">   .extra&#123;</div><div class="line">     width: 150px;        /*1*/</div><div class="line">     height: 300px;       /*1*/</div><div class="line">     background: yellow;  /*1*/</div><div class="line">     </div><div class="line">     margin-left: -150px; /*5*/</div><div class="line">     position: relative;  /*7*/</div><div class="line">     left: 150px;         /*7*/</div><div class="line">     </div><div class="line">   &#125;</div><div class="line">   .main&#123;</div><div class="line">     height: 350px;       /*1*/</div><div class="line">     background: blue;    /*1*/</div><div class="line">     </div><div class="line">     width: 100%;         /*3*/</div><div class="line">   &#125;</div><div class="line"> </div><div class="line"> &lt;/style&gt;</div><div class="line"></div><div class="line"> &lt;div id=&quot;content&quot;&gt;</div><div class="line">   &lt;div class=&quot;main&quot;&gt;main&lt;/div&gt;</div><div class="line">   &lt;div class=&quot;aside&quot;&gt;aside&lt;/div&gt;</div><div class="line">   &lt;div class=&quot;extra&quot;&gt;extra&lt;/div&gt;</div><div class="line"> &lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>效果：<br><img src="http://upload-images.jianshu.io/upload_images/3753845-d9d164b9ccc9e216.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果"></p>
+<p><strong>缺点</strong>：.mian的最小宽度不能小于.aside的宽度。（把整个页面的宽度收缩后，会出现布局错乱的效果，因为当页面收缩时，main因为是其父容器content的100%的宽度，所以main也会跟着收缩，当main收缩到比aside宽度还要小，这时候父容器ct的100%宽度&lt;aside的宽度，就不能容纳aside，所以将其挤到了下一行。）<br><strong>解决：</strong>可以给父容器ct加上一个min-width样式，min-width的值不能小于aside和extra两者间的宽度最大值，这样做可以使中间的main的宽度始终比extra和aside大，就不会导致布局错乱了。</p>
 <ul>
-<li><strong>章节</strong></li>
+<li><h4 id="双飞翼布局"><a href="#双飞翼布局" class="headerlink" title="双飞翼布局"></a>双飞翼布局</h4>双飞翼布局解决了什么问题呢？<br>双飞翼布局不仅能满足main处于优先加载的地位，而且更好的解决了圣杯布局的错乱问题，且css代码更简单，缺点是增加了一个标签。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;: 代表HTML文档的内容。在文档中只能有一个&lt;body&gt;元素。</div><div class="line">&lt;section&gt;: 定义文档中的一个章节。</div><div class="line">&lt;nav&gt;: 定义之包含导航链接的章节。</div><div class="line">&lt;article&gt;: 定义可以独立于内容其余部分的完整独立内容块。</div><div class="line">&lt;aside&gt;: 定义和页面内容关联度较低的内容--如果被删除，剩下的内容仍然很合理。</div><div class="line">&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;: 标题元素实现了六层文档标题，&lt;h1&gt;是最大的标题，&lt;h6&gt;是最小的标题。标题元素简要地描述章节的主题。</div><div class="line">&lt;header&gt;定义页面或章节的头部。它经常包含logo、页面标题和导航性的目录。</div><div class="line">&lt;footer&gt;: 定义页面或章节的尾部。它经常包含版权信息、法律信息链接和反馈建议用的地址。</div><div class="line">&lt;address&gt;: 定义包含联系信息的一个章节。</div><div class="line">&lt;main&gt;: 定义文档中主要或重要的内容。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">    </div><div class="line">    #content:after&#123;</div><div class="line">      content: &apos;&apos;;        /*8*/</div><div class="line">      display: block;     /*8*/</div><div class="line">      clear: both;        /*8*/</div><div class="line">    &#125;</div><div class="line">    #content&#123;</div><div class="line">  </div><div class="line">    &#125;</div><div class="line">    .aside, .main, .extra&#123;</div><div class="line">      float: left;         /*2*/</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    .aside&#123;</div><div class="line">      width: 100px;        /*1*/</div><div class="line">      height: 300px;       /*1*/</div><div class="line">      background: red;     /*1*/</div><div class="line">      </div><div class="line">      margin-left: -100%;  /*4*/</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    .extra&#123;</div><div class="line">      width: 150px;        /*1*/</div><div class="line">      height: 300px;       /*1*/</div><div class="line">      background: yellow;  /*1*/</div><div class="line">      </div><div class="line">      margin-left: -150px; /*5*/</div><div class="line"></div><div class="line">      </div><div class="line">    &#125;</div><div class="line">    .main&#123;</div><div class="line">      /* background: blue;  */   /*第1步添加，第7步注释掉*/</div><div class="line">      /* height: 350px;  */      /*第1步添加，第7步注释掉*/</div><div class="line">      </div><div class="line">      width: 100%;         /*3*/</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    .wrap&#123;</div><div class="line">      margin-left: 100px;  /*6*/</div><div class="line">      margin-right: 150px; /*6*/</div><div class="line">      background: blue;    /*7*/</div><div class="line">      height: 350px;       /*7*/</div><div class="line"> </div><div class="line">    &#125;</div><div class="line">  </div><div class="line">  &lt;/style&gt;</div><div class="line">  </div><div class="line">  &lt;div id=&quot;content&quot;&gt;</div><div class="line">    &lt;div class=&quot;main&quot;&gt;</div><div class="line">      &lt;div class=&quot;wrap&quot;&gt;main&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;div class=&quot;aside&quot;&gt;aside&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;extra&quot;&gt;extra&lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>效果：<br><img src="http://upload-images.jianshu.io/upload_images/3753845-0487b4900f68078d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果"></p>
 <ul>
-<li><strong>组织内容</strong></li>
+<li>###实现单行文字垂直居中，设置<code>line-height等于height</code>；（也可以说把<code>line-heihgt</code>设置为你需要的<code>box</code>的大小可以实现单行文字的垂直居中）</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;: 定义一个段落。</div><div class="line">&lt;hr&gt;: 代表章节、文章或其他长内容中段落之间的分隔符。</div><div class="line">&lt;pre&gt;: 代表其内容已经预先排版过，格式应当保留。</div><div class="line">&lt;blockquote&gt;: 代表引用其他来源的内容。</div><div class="line">&lt;ol&gt;: 定义一个有序列表。</div><div class="line">&lt;ul&gt;: 定义一个无序列表。</div><div class="line">&lt;li&gt;: 定义列表中的一个列表项。</div><div class="line">&lt;dl&gt;: 定义一个定义列表(一系列术语和其定义)。</div><div class="line">&lt;dt&gt;: 代表一个由下一个&lt;dd&gt;定义的术语。</div><div class="line">&lt;dd&gt;: 代表出现在它之前术语的定义。</div><div class="line">&lt;figure&gt;: 代表一个和文档有关的图例。</div><div class="line">&lt;figcaption&gt;: 代表一个图例的说明。</div><div class="line">&lt;div&gt;: 代表一个通用的容器，没有特殊含义。</div></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/3753845-4eb5265f9440da98.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="单行文字垂直居中"></p>
 <ul>
-<li><strong>文字形式</strong></li>
+<li><h3 id="实现高度不固定的多行文字垂直居中，设置上下padding相等；"><a href="#实现高度不固定的多行文字垂直居中，设置上下padding相等；" class="headerlink" title="实现高度不固定的多行文字垂直居中，设置上下padding相等；"></a>实现高度不固定的多行文字垂直居中，设置上下padding相等；</h3>图中高度是随着内容的变化而变化。 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&lt;a&gt;: 代表一个链接到其他资源的超链接。</div><div class="line">&lt;em&gt;: 代表强调文字。</div><div class="line">&lt;strong&gt;: 代表特别重要文字。</div><div class="line">&lt;small&gt;: 代表注释，如免责声明、版权声明等，对理解文档不重要。</div><div class="line">&lt;s&gt;: 代表不准确或不相关的内容。</div><div class="line">&lt;cite&gt;: 代表作品标题。</div><div class="line">&lt;q&gt;: 代表内联的引用。</div><div class="line">&lt;dfn&gt;: 代表一个术语包含在其最近祖先内容中的定义。</div><div class="line">&lt;abbr&gt;: 代表省略或缩写，其完整内容在title属性中。</div><div class="line">&lt;data&gt;: 关联一个内容的机器可读的等价形式（该元素只在WHATWG版本的HTML标准中，不在W3C版本的HTML5标准中）。</div><div class="line">&lt;time&gt;: 代表日期和时间值；机器可读的等价形式通过datetime属性指定。</div><div class="line">&lt;code&gt;: 代表计算机代码。</div><div class="line">&lt;var&gt;: 代表代码中的变量。</div><div class="line">&lt;samp&gt;: 代表程序或电脑的输出。</div><div class="line">&lt;kbd&gt;: 代表用户输入，一般从键盘输出，但也可以代表其他输入，如语音输入。</div><div class="line">&lt;sub&gt;,&lt;sup&gt;: 分别代表下标和上标。</div><div class="line">&lt;i&gt;: 代表一段不同性质的文字，如技术术语、外交短语等。</div><div class="line">&lt;b&gt;: 代表一段需要被关注的文字。</div><div class="line">&lt;u&gt;: 代表一段需要下划线呈现的文本注释，如标记出拼写错误的文字等。</div><div class="line">&lt;mark&gt;: 代表一段需要被高亮的引用 文字。</div><div class="line">&lt;ruby&gt;: 代表被ruby 注释 标记的文本，如中文汉字和它的拼音。</div><div class="line">&lt;rt&gt;: 代表ruby 注释 ，如中文拼音。</div><div class="line">&lt;rp&gt;: 代表 ruby 注释两边的额外插入文本 ，用于在不支持 ruby 注释显示的浏览器中提供友好的注释显示。</div><div class="line">&lt;bdi&gt;: 代表需要脱离 父元素文本方向的一段文本。它允许嵌入一段不同或未知文本方向格式的文本。</div><div class="line">&lt;bdo&gt;: 指定子元素的文本方向 ，显式地覆盖默认的文本方向。</div><div class="line">&lt;span&gt;: 代表一段没有特殊含义的文本，当其他语义元素都不适合文本时候可以使用该元素。</div><div class="line">&lt;br&gt;: 代表换行 。</div><div class="line">&lt;wbr&gt;: 代表建议换行 (Word Break Opportunity) ，当文本太长需要换行时将会在此处添加换行符。</div></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/3753845-68b2c68333613d37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图一"></p>
+<p>缺点：如果要实现一个弹窗，当你点击一个按钮的时候页面上出现了一个弹框，这时弹窗会出现在页面的中心位置如(图二)。而弹窗的位置是由它的容器来决定的，它的容器是可变的，即容器的高度是可变化的；但是图一中的高度是无所谓的，它只需要上下的缝隙相等即可，而它的高度是由内容来撑开的。要实现图二居中场景可以用下面的绝对定位的方法。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3753845-79a64128b6c040cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图二"></p>
 <ul>
-<li><strong>编辑</strong></li>
+<li><h3 id="绝对定位实现（图二场景）垂直居中"><a href="#绝对定位实现（图二场景）垂直居中" class="headerlink" title="绝对定位实现（图二场景）垂直居中"></a>绝对定位实现（图二场景）垂直居中</h3>给图二dialog容器设置如下步骤：<br>设置1：<br>给容器设置绝对定位<br><code>position: absolute</code><br>设置2<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">left: 50%; // 50%是父容器的50%;</div><div class="line">效果：会平移父容器的一半；</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;ins&gt;:  定义增加到文档的内容。</div><div class="line">&lt;del&gt;: 定义从文档移除 的内容。</div></pre></td></tr></table></figure>
+<p>设置3：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">margin-left: (容器本身宽度的一半)，// 注意一定要设置为负数；</div><div class="line">效果：这时容器会在父容器中水平居中；</div></pre></td></tr></table></figure></p>
+<p>设置4：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">top: 50%; //是父容器的50%；</div><div class="line">效果： 会平移父容器的一半，不过是容器的左上角在父容器的中心位置。要想容器整体在父容器中垂直居中，需要第四步。</div></pre></td></tr></table></figure></p>
+<p>设置5：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">marign-top:  (容器本身高度的一半); // 注意要用负数哦；</div><div class="line">这时就会实现图三效果</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3753845-3f2edbc9fde3f99b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图三"></p>
+<p>注意：当这个元素的高度或者宽度不是固定的时候，那么<code>margin-left</code>和 <code>margin-top</code>的值就会无法确定，此种方法就会无法实现图二垂直居中效果。<br>不过可以用css3中的属性：<code>transform: translate(-50%， -50%)；</code>来实现如(图四)，使用这个属性的话，不管高度或者宽度是多少都可以实现居中（但此属性在低版本中不能用）。<br><img src="http://upload-images.jianshu.io/upload_images/3753845-4f75d390a3e035b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图四"></p>
 <ul>
-<li><strong>嵌入内容</strong></li>
+<li><h3 id="vertical-align实现居中"><a href="#vertical-align实现居中" class="headerlink" title="vertical-align实现居中"></a>vertical-align实现居中</h3><code>vertical-align: middle；</code>必须要作用在行内元素和表格上才生效；（如果是一个表格table里面的table-cell，给它加一个<code>vertical-align: middle;</code> 那么表格里面的内容文字就会垂直居中。如果是一个行内元素，比如文字，给它加一个<code>vertical-align: middle;</code> 那么文字之间就会相对于基线来对其；如图：<br><img src="http://upload-images.jianshu.io/upload_images/3753845-0baa4d4b81dc9afe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>）<br>另外图片和文字垂直居中，如下图：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;img&gt;: 代表一张图片 。</div><div class="line">&lt;iframe&gt;: 代表一个内联的框架 。</div><div class="line">&lt;embed&gt;: 代表一个嵌入的外部资源，如应用程序或交互内容。</div><div class="line">&lt;object&gt;: 代表一个外部资源 ，如图片、HTML 子文档、插件等。</div><div class="line">&lt;param&gt;: 代表 &lt;object&gt; 元素所指定的插件的参数 。</div><div class="line">&lt;video&gt;: 代表一段视频 及其视频文件和字幕，并提供了播放视频的用户界面。</div><div class="line">&lt;audio&gt;: 代表一段声音,或音频流 。</div><div class="line">&lt;source&gt;: 为 &lt;video&gt; 或 &lt;audio&gt; 这类媒体元素指定媒体源 。</div><div class="line">&lt;track&gt;: 为 &lt;video&gt; 或 &lt;audio&gt; 这类媒体元素指定文本轨道（字幕） 。</div><div class="line">&lt;canvas&gt;: 代表位图区域 ，可以通过脚本在它上面实时呈现图形，如图表、游戏绘图等。</div><div class="line">&lt;map&gt;:  与 &lt;area&gt; 元素共同定义图像映射区域。</div><div class="line">&lt;area&gt;: 	与 &lt;map&gt; 元素共同定义图像映射区域。</div><div class="line">&lt;svg&gt;: 定义一个嵌入式矢量图。</div><div class="line">&lt;math&gt;: 定义一段数学公式 。</div></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/3753845-6e9275e950388398.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>下面可以利用<code>vertical-align: middle;</code>的特性实现图五效果，让一个图片在一个固定宽高的盒子中垂直居中：<br><img src="http://upload-images.jianshu.io/upload_images/3753845-9007365056551016.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图五"><br>实现：<br><img src="http://upload-images.jianshu.io/upload_images/3753845-30b9181b68d01da3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3753845-8b62db0c46d2ed05.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p><strong>方法2</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3753845-d5c15536a8969a3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <ul>
-<li><strong>表格</strong></li>
+<li><h3 id="使用table-cell实现垂直居中"><a href="#使用table-cell实现垂直居中" class="headerlink" title="使用table-cell实现垂直居中"></a>使用table-cell实现垂直居中</h3>这种方法只需要把父容器用<code>display: table-cell;</code> 来实现，这样的话就相当于这个元素像一个表格一样来渲染里面的内容，如下图：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;table&gt;:  定义多维数据。</div><div class="line">&lt;caption&gt;: 代表表格的标题 。</div><div class="line">&lt;colgroup&gt;: 代表表格中一组单列或多列 。</div><div class="line">&lt;col&gt;: 代表表格中的列。</div><div class="line">&lt;tbody&gt;: 	代表表格中一块具体数据（表格主体）。</div><div class="line">&lt;thead&gt;: 代表表格中一块列标签 （表头）。</div><div class="line">&lt;tfoot&gt;: 代表表格中一块列摘要 （表尾）。</div><div class="line">&lt;tr&gt;: 代表表格中的行 。</div><div class="line">&lt;td&gt;: 代表表格中的单元格 。</div><div class="line">&lt;th&gt;: 代表表格中的头部单元格 。</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>表单</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;form&gt;: 代表一个表单 ，由控件组成。</div><div class="line">&lt;fieldset&gt;: 代表控件组 。</div><div class="line">&lt;legend&gt;: 代表&lt;fieldset&gt;控件组的标题 。</div><div class="line">&lt;label&gt;: 代表表单控件的标题 。</div><div class="line">&lt;input&gt;: 代表允许用户编辑数据的数据区 （文本框、单选框、复选框等）。</div><div class="line">&lt;button&gt;: 代表按钮 。</div><div class="line">&lt;select&gt;:  代表下拉框 。</div><div class="line">&lt;datalist&gt;: 代表提供给其他控件的一组预定义选项 。</div><div class="line">&lt;optgroup&gt;: 代表一个选项分组 。</div><div class="line">&lt;option&gt;: 代表一个 &lt;select&gt; 元素或 &lt;datalist&gt; 元素中的一个选项。</div><div class="line">&lt;textarea&gt;: 代表多行文本框 。</div><div class="line">&lt;keygen&gt;: 代表一个密钥对生成器 控件。</div><div class="line">&lt;output&gt;: 代表计算值 。</div><div class="line">&lt;progress&gt;: 代表进度条 。</div><div class="line">&lt;meter&gt;: 代表滑动条 。</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>交互元素</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;details&gt;: 代表一个用户可以(点击)获取额外信息或控件的小部件 。</div><div class="line">&lt;summary&gt;: 代表 &lt;details&gt; 元素的综述 或标题 。</div><div class="line">&lt;menuitem&gt;: 代表一个用户可以点击的菜单项。</div><div class="line">&lt;menu&gt;: 代表菜单。</div></pre></td></tr></table></figure>
-<h3 id="空标签"><a href="#空标签" class="headerlink" title="空标签"></a>空标签</h3><p>一个空元素可能是HTML,SVG，或者MathML里的一个不可能存在子节点（例如内嵌的元素或者元素内的文本）的element。<br>在HTML中，许多组合是没有任何语义含义的，比如一个<code>&lt;audio&gt;</code>元素嵌套在一个<code>&lt;hr&gt;</code>元素里。而且通常在一个空元素上使用一个闭标签是无效的。例如，<code>&lt;input type=&quot;text&quot;&gt;&lt;/input&gt;</code>的闭标签是无效的HTML。</p>
-<p>在HTML中有一下这些空元素：<br><code>&lt;area&gt;</code>、<code>&lt;base&gt;</code>、<code>&lt;br&gt;</code>、<code>&lt;col&gt;</code>、<code>&lt;colgroup&gt;</code> when the <code>span</code> is present 、<code>&lt;command&gt;</code>、<code>&lt;embed&gt;</code>、<code>&lt;hr&gt;</code>、<code>&lt;img&gt;</code>、<code>&lt;input&gt;</code>、<code>&lt;keygen&gt;</code>、<code>&lt;link&gt;</code>、<code>&lt;meta&gt;</code>、<code>&lt;param&gt;</code>、<code>&lt;source&gt;</code>、<code>&lt;track&gt;</code>、<code>&lt;wbr&gt;</code> </p>
-<h3 id="可替换标签"><a href="#可替换标签" class="headerlink" title="可替换标签"></a>可替换标签</h3><p>典型的可替换元素有<code>&lt;img&gt;</code>、<code>&lt;object&gt;</code>、<code>&lt;video&gt;</code>和表单元素，如<code>&lt;textarea&gt;</code>、<code>&lt;input&gt;</code>。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3753845-257895a05680e0b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>缺点： 把块级元素用<code>display: table-cell;来展现，改变了块级元素的展现方式。</code></p>
 <p><strong>文章著作权归irwenjing所有，转载须说明来源</strong></p>
 
       
@@ -257,7 +286,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/html//" class="article-tag-list-link color5">html</a>
+        			<a href="/categories/CSS//" class="article-tag-list-link color4">CSS</a>
         		</li>
       		
 		</ul>
@@ -312,7 +341,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/12/HTML标签/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/19/css布局及居中/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -326,20 +355,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/27/命令行简单使用/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/12/HTML标签/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          命令行简单使用
+          HTML标签
         
       </div>
     </a>
   
-  
-    <a href="/2018/04/19/css布局及居中/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS布局及居中</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -368,8 +392,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2018/04/12/HTML标签/", 
-    sourceId: "HTML标签",
+    url: "http://yoursite.com/2018/04/19/css布局及居中/", 
+    sourceId: "css布局及居中",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
