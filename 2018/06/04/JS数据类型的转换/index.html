@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JS的数据类型 | irwenjing&#39;s blog</title>
+  <title>JS数据类型的转换 | irwenjing&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="js里共有其中基本数据类型：number、string、boolean、undefined、null、object、symbol.  number   整数和小数:（比如1和3.14） 科学记数法：1.23e2 二进制：0b11 八进制：011（后来 ES5 添加了 0o11 语法） 十六进制：0x11   string   空字符串：’’ 多行字符串：  12345var s = &amp;apos;1">
+  <meta name="description" content="数据类型的转换可分为强制转换和自动转换。 强制转换强制转换主要指使用Number、String和Boolean三个函数，手动将各种类型的值分布转换成数字、字符串或布尔值。  Number()使用Number函数，可以将任意类型的值转化成数值。下面分成两种情况讨论，一种是参数是原始类型的值，另一种是参数是对象。（1）原始类型值  12345678910111213141516171819202122">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS的数据类型">
-<meta property="og:url" content="http://yoursite.com/2018/06/01/JS的数据类型/index.html">
+<meta property="og:title" content="JS数据类型的转换">
+<meta property="og:url" content="http://yoursite.com/2018/06/04/JS数据类型的转换/index.html">
 <meta property="og:site_name" content="irwenjing's blog">
-<meta property="og:description" content="js里共有其中基本数据类型：number、string、boolean、undefined、null、object、symbol.  number   整数和小数:（比如1和3.14） 科学记数法：1.23e2 二进制：0b11 八进制：011（后来 ES5 添加了 0o11 语法） 十六进制：0x11   string   空字符串：’’ 多行字符串：  12345var s = &amp;apos;1">
-<meta property="og:updated_time" content="2018-06-01T08:24:08.280Z">
+<meta property="og:description" content="数据类型的转换可分为强制转换和自动转换。 强制转换强制转换主要指使用Number、String和Boolean三个函数，手动将各种类型的值分布转换成数字、字符串或布尔值。  Number()使用Number函数，可以将任意类型的值转化成数值。下面分成两种情况讨论，一种是参数是原始类型的值，另一种是参数是对象。（1）原始类型值  12345678910111213141516171819202122">
+<meta property="og:updated_time" content="2018-06-04T03:53:22.317Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS的数据类型">
-<meta name="twitter:description" content="js里共有其中基本数据类型：number、string、boolean、undefined、null、object、symbol.  number   整数和小数:（比如1和3.14） 科学记数法：1.23e2 二进制：0b11 八进制：011（后来 ES5 添加了 0o11 语法） 十六进制：0x11   string   空字符串：’’ 多行字符串：  12345var s = &amp;apos;1">
+<meta name="twitter:title" content="JS数据类型的转换">
+<meta name="twitter:description" content="数据类型的转换可分为强制转换和自动转换。 强制转换强制转换主要指使用Number、String和Boolean三个函数，手动将各种类型的值分布转换成数字、字符串或布尔值。  Number()使用Number函数，可以将任意类型的值转化成数值。下面分成两种情况讨论，一种是参数是原始类型的值，另一种是参数是对象。（1）原始类型值  12345678910111213141516171819202122">
   
     <link rel="alternative" href="/atom.xml" title="irwenjing&#39;s blog" type="application/atom+xml">
   
@@ -154,114 +154,88 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JS的数据类型" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JS数据类型的转换" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JS的数据类型
+      JS数据类型的转换
     </h1>
   
 
         
-        <a href="/2018/06/01/JS的数据类型/" class="archive-article-date">
-  	<time datetime="2018-06-01T08:39:55.102Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-01</time>
+        <a href="/2018/06/04/JS数据类型的转换/" class="archive-article-date">
+  	<time datetime="2018-06-04T03:53:48.624Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>js里共有其中基本数据类型：number、string、boolean、undefined、null、object、symbol.</p>
-<ol>
-<li>number</li>
-</ol>
+        <p>数据类型的转换可分为强制转换和自动转换。</p>
+<h3 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h3><p>强制转换主要指使用<code>Number</code>、<code>String</code>和<code>Boolean</code>三个函数，手动将各种类型的值分布转换成数字、字符串或布尔值。</p>
 <ul>
-<li>整数和小数:（比如1和3.14）</li>
-<li>科学记数法：1.23e2</li>
-<li>二进制：0b11</li>
-<li>八进制：011（后来 ES5 添加了 0o11 语法）</li>
-<li>十六进制：0x11</li>
+<li>Number()<br>使用<code>Number</code>函数，可以将任意类型的值转化成数值。<br>下面分成两种情况讨论，一种是参数是原始类型的值，另一种是参数是对象。<br>（1）原始类型值</li>
 </ul>
-<ol>
-<li>string</li>
-</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//数值：转换后还是原来的值</div><div class="line">Number(3.14) // 3.14</div><div class="line"></div><div class="line">// 字符串：如果可以被解析为数值，则转换为相应的数值</div><div class="line">Number(&apos;3.14&apos;)  //3.14</div><div class="line"></div><div class="line">// 字符串：如果不可以被解析为数值，返回 NaN</div><div class="line">Number(&apos;3.14abc&apos;)  //NaN</div><div class="line"></div><div class="line">// 空字符串转为0</div><div class="line">Number(&apos; &apos;) // 0</div><div class="line"></div><div class="line">// 布尔值：true 转成 1，false 转成 0</div><div class="line">Number(true) // 1</div><div class="line">Number(false) // 0</div><div class="line"></div><div class="line">// undefined：转成 NaN</div><div class="line">Number(undefined) // NaN</div><div class="line"></div><div class="line">// null：转成0</div><div class="line">Number(null) // 0</div></pre></td></tr></table></figure>
+<p>补充：<code>Number</code>函数将字符串转为数值，要比<code>parseInt</code>和<code>parseFloat</code>函数严格很多。基本上，只要有一个字符无法转成数值，整个字符串就会被转为<code>NaN</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">1.</div><div class="line">parseInt(&apos;12.3abc&apos;) // 12</div><div class="line">parseFloat(3.14abc)  //3.14</div><div class="line">Number(&apos;123abc&apos;) // NaN</div><div class="line">&apos;5&apos; - 1 //4</div><div class="line">+&apos;3&apos;  //3</div><div class="line"></div><div class="line">//上面代码中，parseInt逐个解析字符但它将小数转为整数，parseFloat也逐个解析字符但它保留小数点后面的数字。而Number函数整体转换字符串的类型。</div><div class="line"></div><div class="line">2.</div><div class="line">parseInt(&apos;\t\v\r12.34\n&apos;) // 12</div><div class="line">Number(&apos;\t\v\r12.34\n&apos;) // 12.34</div><div class="line">//第2个例子中说明parseInt和Number函数都会自动过滤一个字符串前导和后缀的空格。</div></pre></td></tr></table></figure>
+<p>（2）对象<br>简单的规则是，Number方法的参数是对象时，将返回NaN，除非是包含单个数值的数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Number(&#123;a: 1&#125;) // NaN</div><div class="line">Number([1, 2, 3]) // NaN</div><div class="line">Number([5]) // 5</div></pre></td></tr></table></figure>
 <ul>
-<li>空字符串：’’</li>
-<li>多行字符串：</li>
+<li>String()<br><code>String</code>函数可以将任意类型的值转化成字符串。<br>三种方式：1. String(x) 、 2. x.toString()、 3. ‘ ‘ + x。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var s = &apos;12345&apos; +</div><div class="line">        &apos;67890&apos; // 无回车符号</div><div class="line">或</div><div class="line">var s = `12345</div><div class="line">         67890` // 含回车符号</div></pre></td></tr></table></figure>
-<ol>
-<li>boolean<br>表示真伪的两个特殊值，即true（真）和false（假）</li>
-</ol>
+<p>原始类型值</p>
+<blockquote>
+<p>数值：转为相应的字符串。<br>字符串：转换后还是原来的值。<br>布尔值：true转为字符串”true”，false转为字符串”false” 。<br>undefined: 转为字符串”undefined”。<br>null: 转为字符串”null”。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">String(123) // &quot;123&quot;</div><div class="line">String(&apos;abc&apos;) // &quot;abc&quot;</div><div class="line">String(true) // &quot;true&quot;</div><div class="line">String(undefined) // &quot;undefined&quot;</div><div class="line">String(null) // &quot;null&quot;</div></pre></td></tr></table></figure>
+<p>对象<br><code>String</code>方法的参数如果是对象，返回一个类型字符串；如果是数组，返回该数组的字符串形式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String(&#123;a: 1&#125;) // &quot;[object Object]&quot;</div><div class="line">String([1, 2, 3]) // &quot;1,2,3&quot;</div></pre></td></tr></table></figure>
 <ul>
-<li>a &amp;&amp; b 在 a 和 b 都为 true 时，取值为 true；否则为 false</li>
-<li>a || b 在 a 和 b 都为 false 时，取值为 false；否则为 true</li>
+<li>Boolean()<br><code>Boolean</code>函数可以将任意类型的值转为布尔值。<br>两种方法：1.Boolean(x) 、2.!!x<br>它的转换规则相对简单：除了以下五个值的转换结果为<code>false</code>，其他的值全部为<code>true</code>。</li>
 </ul>
-<p>下列运算符会返回布尔值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">两元逻辑运算符： &amp;&amp; (And)，|| (Or)</div><div class="line">前置逻辑运算符： ! (Not)</div><div class="line">相等运算符：===，!==，==，!=</div><div class="line">比较运算符：&gt;，&gt;=，&lt;，&lt;=</div></pre></td></tr></table></figure>
-<p>如果 JavaScript 预期某个位置应该是布尔值，会将该位置上现有的值自动转为布尔值。转换规则是除了下面六个值被转为false，其他值都视为true。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">undefined</div><div class="line">null</div><div class="line">false</div><div class="line">0</div><div class="line">NaN</div><div class="line">&quot;&quot;或&apos;&apos;（空字符串）</div></pre></td></tr></table></figure>
-<ol>
-<li><p>undefined和null<br>undefined：表示“未定义”或不存在，即由于目前没有定义，所以此处暂时没有任何值。<br>null：表示空值，即此处的值为空。<br>i. （规范）如果一个变量没有被赋值，那么这个变量的值就是undefined<br>ii.（习俗）如果你想表示一个还没赋值的对象，就用 null。如果你想表示一个还没赋值的字符串/数字/布尔/symbol，就用 undefined（但是实际上你直接 var xxx 一下就行了，不用写 var xxx = undefined）</p>
-</li>
-<li><p>object</p>
-</li>
-</ol>
+<blockquote>
+<p>undefined<br>null<br>-0或+0<br>NaN<br>‘ ‘ (空字符串)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Boolean(undefined) // false</div><div class="line">Boolean(null) // false</div><div class="line">Boolean(0) // false</div><div class="line">Boolean(NaN) // false</div><div class="line">Boolean(&apos; &apos;) // false</div></pre></td></tr></table></figure>
+<p>注意，所有对象（包括空对象）的转换结果都是true，甚至连false对应的布尔对象new Boolean(false)也是true。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Boolean(&#123;&#125;) // true</div><div class="line">Boolean([]) // true</div><div class="line">Boolean(new Boolean(false)) // true</div></pre></td></tr></table></figure>
+<h3 id="自动转换"><a href="#自动转换" class="headerlink" title="自动转换"></a>自动转换</h3><p>自动转换是以强制转换为基础的。<br>遇到以下三种情况时，JavaScript 会自动转换数据类型，即转换是自动完成的。</p>
+<p>（1）不同类型的数据互相运算。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">123 + &apos;abc&apos; // &quot;123abc&quot;</div></pre></td></tr></table></figure>
+<p>（2）对非布尔值类型的数据求布尔值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if (&apos;abc&apos;) &#123;</div><div class="line">  console.log(&apos;hello&apos;)</div><div class="line">&#125;  // &quot;hello&quot;</div></pre></td></tr></table></figure>
+<p>(3)对非数值类型的值使用一元运算符（即+和-）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">+ &#123;foo: &apos;bar&apos;&#125; // NaN</div><div class="line">- [1, 2, 3] // NaN</div></pre></td></tr></table></figure>
+<p>建议在预期为布尔值、数值、字符串的地方，全部使用Boolean、Number和String函数进行显式转换。</p>
 <ul>
-<li>object就是上面几种基本类型(无序地)组合在一起</li>
-<li>object里面可以有object</li>
+<li>自动转换为数值<br>除加法运算符(+)有可能把运算子转为字符串，其他运算符都会把运算转为数值。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var person = &#123;</div><div class="line">      name: &apos;Frank&apos;, </div><div class="line">      &apos;child&apos;: &#123;</div><div class="line">          name: &apos;Jack&apos;</div><div class="line">      &#125;, // 最后这个逗号可有可无</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&apos;5&apos; - &apos;2&apos; // 3</div><div class="line">&apos;5&apos; * &apos;2&apos; // 10</div><div class="line">true - 1  // 0</div><div class="line">false - 1 // -1</div><div class="line">&apos;1&apos; - 1   // 0</div><div class="line">&apos;5&apos; * []    // 0</div><div class="line">false / &apos;5&apos; // 0</div><div class="line">&apos;abc&apos; - 1   // NaN</div><div class="line">null + 1 // 1</div><div class="line">undefined + 1 // NaN</div><div class="line"></div><div class="line">上面代码中，运算符两侧的运算子，都被转成了数值。</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：null转为数值时为0，而undefined转为数值时为NaN。</p>
+</blockquote>
+<p>一元运算符也会把运算子转成数值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">+&apos;abc&apos; // NaN</div><div class="line">-&apos;abc&apos; // NaN</div><div class="line">+true // 1</div><div class="line">-false // 0</div></pre></td></tr></table></figure>
 <ul>
-<li>object 的 key 一律是字符串，不存在其他类型的 key</li>
-<li>object[‘’] 是合法的</li>
-<li>object[‘key’] 可以写作 object.key (查看一个对象本身的所有属性，可以使用Object.keys方法。)</li>
+<li>自动转换为布尔值 Boolean</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">  key1: 1,</div><div class="line">  key2: 2</div><div class="line">&#125;;</div><div class="line"></div><div class="line">Object.keys(obj);</div><div class="line">// [&apos;key1&apos;, &apos;key2&apos;]</div></pre></td></tr></table></figure>
+<p><code>Boolean</code>函数可以将任意类型的值转为布尔值。<br>除了以下五个值的转换结果为false，其他的值全部为true。</p>
+<blockquote>
+<p>undefined<br>null<br>-0或+0<br>NaN<br>‘ ‘ (空字符串)</p>
+</blockquote>
 <ul>
-<li>注意 object.key 与 object[key] 不同</li>
-<li><p>delete object[‘key’]  (delete命令用于删除对象的属性，删除成功后返回true。)</p>
-</li>
-<li><p>‘key’ in object<br> (in运算符用于检查对象是否包含某个属性（注意，检查的是键名，不是键值），如果包含就返回true，否则返回false。)</p>
-</li>
+<li>自动转为字符串<br>字符串的自动转换，主要发生在字符串的加法运算时。当一个值为字符串，另一个值为非字符串，则后者转为字符串。<br>方法： 1. ‘ ‘ + x 、 2. window.String() 、  3. x.toString()。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var obj = &#123; p: 1 &#125;;</div><div class="line">&apos;p&apos; in obj // true</div></pre></td></tr></table></figure>
-<p>(in运算符的一个问题是，它不能识别哪些属性是对象自身的，哪些属性是继承的。)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;&#125;;</div><div class="line">&apos;toString&apos; in obj // true</div><div class="line">上面代码中，toString方法不是对象obj自身的属性，而是继承的属性。但是，in运算符不能识别，对继承的属性也返回true。</div></pre></td></tr></table></figure>
-<p>6.symbol<br>Symbol 的用途：Symbol 可以创建一个独一无二的值（但并不是字符串）。<br>即：Symbol 生成一个全局唯一的值。<br><a href="https://zhuanlan.zhihu.com/p/22652486" target="_blank" rel="external">js中的symbol</a></p>
-<p>7.typeof操作符</p>
-<table>
-<thead>
-<tr>
-<th>xxx 的类型</th>
-<th style="text-align:center">string</th>
-<th style="text-align:right">number</th>
-<th>boolean</th>
-<th style="text-align:center">symbol</th>
-<th style="text-align:right">undefined</th>
-<th>null</th>
-<th style="text-align:center">object</th>
-<th style="text-align:right">function</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>typeof xxx</td>
-<td style="text-align:center">‘string’</td>
-<td style="text-align:right">‘number’</td>
-<td>‘boolean’</td>
-<td style="text-align:center">‘symbol’</td>
-<td style="text-align:right">‘undefined’</td>
-<td>‘object’</td>
-<td style="text-align:center">‘object’</td>
-<td style="text-align:right">‘function’</td>
-</tr>
-</tbody>
-</table>
-<p>注意 function 并不是一个类型!</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&apos;5&apos; + 1 // &apos;51&apos;</div><div class="line">&apos;5&apos; + true // &quot;5true&quot;</div><div class="line">&apos;5&apos; + false // &quot;5false&quot;</div><div class="line">&apos;5&apos; + &#123;&#125; // &quot;5[object Object]&quot;</div><div class="line">&apos;5&apos; + [] // &quot;5&quot;</div><div class="line">&apos;5&apos; + function ()&#123;&#125; // &quot;5function ()&#123;&#125;&quot;</div><div class="line">&apos;5&apos; + undefined // &quot;5undefined&quot;</div><div class="line">&apos;5&apos; + null // &quot;5null&quot;</div></pre></td></tr></table></figure>
+<h4 id="内存图与垃圾回收"><a href="#内存图与垃圾回收" class="headerlink" title="内存图与垃圾回收"></a>内存图与垃圾回收</h4><h4 id="深复制"><a href="#深复制" class="headerlink" title="深复制"></a>深复制</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = 1</div><div class="line">var b = a</div><div class="line">b = 2  //这个时候改变b</div><div class="line">a 完全不受b的影响</div><div class="line">那么我们就说这是一个深复制。</div><div class="line">对于简单类型的数据来说，赋值就是深拷贝。</div><div class="line">对于复杂类型的数据（对象）来说才需要区分深拷贝和浅拷贝。</div></pre></td></tr></table></figure>
+<p>深拷贝:就是对 Heap 内存进行完全的拷贝。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = &#123;name: &apos;frank&apos;&#125;</div><div class="line">var b = deepClone(a) // deepClone 还不知道怎么实现</div><div class="line">b.name = &apos;b&apos;</div><div class="line">a.name === &apos;a&apos; // true</div></pre></td></tr></table></figure>
+<p>浅拷贝</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var a = &#123;name: &apos;frank&apos;&#125;</div><div class="line">var b = a</div><div class="line">b.name = &apos;b&apos;</div><div class="line">a.name === &apos;b&apos;   //true</div><div class="line">因为对b操作后，a也变了。</div></pre></td></tr></table></figure>
 <p><strong>文章著作权归irwenjing所有，转载须说明来源</strong></p>
 
       
@@ -353,7 +327,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/06/01/JS的数据类型/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/06/04/JS数据类型的转换/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -367,20 +341,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/19/css布局及居中/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/06/01/JS的数据类型/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CSS布局及居中
+          JS的数据类型
         
       </div>
     </a>
   
-  
-    <a href="/2018/06/04/JS数据类型的转换/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JS数据类型的转换</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -409,8 +378,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2018/06/01/JS的数据类型/", 
-    sourceId: "JS的数据类型",
+    url: "http://yoursite.com/2018/06/04/JS数据类型的转换/", 
+    sourceId: "JS数据类型的转换",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };

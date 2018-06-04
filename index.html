@@ -154,6 +154,142 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JS数据类型的转换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/04/JS数据类型的转换/">JS数据类型的转换</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/04/JS数据类型的转换/" class="archive-article-date">
+  	<time datetime="2018-06-04T03:53:48.624Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>数据类型的转换可分为强制转换和自动转换。</p>
+<h3 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h3><p>强制转换主要指使用<code>Number</code>、<code>String</code>和<code>Boolean</code>三个函数，手动将各种类型的值分布转换成数字、字符串或布尔值。</p>
+<ul>
+<li>Number()<br>使用<code>Number</code>函数，可以将任意类型的值转化成数值。<br>下面分成两种情况讨论，一种是参数是原始类型的值，另一种是参数是对象。<br>（1）原始类型值</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//数值：转换后还是原来的值</div><div class="line">Number(3.14) // 3.14</div><div class="line"></div><div class="line">// 字符串：如果可以被解析为数值，则转换为相应的数值</div><div class="line">Number(&apos;3.14&apos;)  //3.14</div><div class="line"></div><div class="line">// 字符串：如果不可以被解析为数值，返回 NaN</div><div class="line">Number(&apos;3.14abc&apos;)  //NaN</div><div class="line"></div><div class="line">// 空字符串转为0</div><div class="line">Number(&apos; &apos;) // 0</div><div class="line"></div><div class="line">// 布尔值：true 转成 1，false 转成 0</div><div class="line">Number(true) // 1</div><div class="line">Number(false) // 0</div><div class="line"></div><div class="line">// undefined：转成 NaN</div><div class="line">Number(undefined) // NaN</div><div class="line"></div><div class="line">// null：转成0</div><div class="line">Number(null) // 0</div></pre></td></tr></table></figure>
+<p>补充：<code>Number</code>函数将字符串转为数值，要比<code>parseInt</code>和<code>parseFloat</code>函数严格很多。基本上，只要有一个字符无法转成数值，整个字符串就会被转为<code>NaN</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">1.</div><div class="line">parseInt(&apos;12.3abc&apos;) // 12</div><div class="line">parseFloat(3.14abc)  //3.14</div><div class="line">Number(&apos;123abc&apos;) // NaN</div><div class="line">&apos;5&apos; - 1 //4</div><div class="line">+&apos;3&apos;  //3</div><div class="line"></div><div class="line">//上面代码中，parseInt逐个解析字符但它将小数转为整数，parseFloat也逐个解析字符但它保留小数点后面的数字。而Number函数整体转换字符串的类型。</div><div class="line"></div><div class="line">2.</div><div class="line">parseInt(&apos;\t\v\r12.34\n&apos;) // 12</div><div class="line">Number(&apos;\t\v\r12.34\n&apos;) // 12.34</div><div class="line">//第2个例子中说明parseInt和Number函数都会自动过滤一个字符串前导和后缀的空格。</div></pre></td></tr></table></figure>
+<p>（2）对象<br>简单的规则是，Number方法的参数是对象时，将返回NaN，除非是包含单个数值的数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Number(&#123;a: 1&#125;) // NaN</div><div class="line">Number([1, 2, 3]) // NaN</div><div class="line">Number([5]) // 5</div></pre></td></tr></table></figure>
+<ul>
+<li>String()<br><code>String</code>函数可以将任意类型的值转化成字符串。<br>三种方式：1. String(x) 、 2. x.toString()、 3. ‘ ‘ + x。</li>
+</ul>
+<p>原始类型值</p>
+<blockquote>
+<p>数值：转为相应的字符串。<br>字符串：转换后还是原来的值。<br>布尔值：true转为字符串”true”，false转为字符串”false” 。<br>undefined: 转为字符串”undefined”。<br>null: 转为字符串”null”。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">String(123) // &quot;123&quot;</div><div class="line">String(&apos;abc&apos;) // &quot;abc&quot;</div><div class="line">String(true) // &quot;true&quot;</div><div class="line">String(undefined) // &quot;undefined&quot;</div><div class="line">String(null) // &quot;null&quot;</div></pre></td></tr></table></figure>
+<p>对象<br><code>String</code>方法的参数如果是对象，返回一个类型字符串；如果是数组，返回该数组的字符串形式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String(&#123;a: 1&#125;) // &quot;[object Object]&quot;</div><div class="line">String([1, 2, 3]) // &quot;1,2,3&quot;</div></pre></td></tr></table></figure>
+<ul>
+<li>Boolean()<br><code>Boolean</code>函数可以将任意类型的值转为布尔值。<br>两种方法：1.Boolean(x) 、2.!!x<br>它的转换规则相对简单：除了以下五个值的转换结果为<code>false</code>，其他的值全部为<code>true</code>。</li>
+</ul>
+<blockquote>
+<p>undefined<br>null<br>-0或+0<br>NaN<br>‘ ‘ (空字符串)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Boolean(undefined) // false</div><div class="line">Boolean(null) // false</div><div class="line">Boolean(0) // false</div><div class="line">Boolean(NaN) // false</div><div class="line">Boolean(&apos; &apos;) // false</div></pre></td></tr></table></figure>
+<p>注意，所有对象（包括空对象）的转换结果都是true，甚至连false对应的布尔对象new Boolean(false)也是true。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Boolean(&#123;&#125;) // true</div><div class="line">Boolean([]) // true</div><div class="line">Boolean(new Boolean(false)) // true</div></pre></td></tr></table></figure>
+<h3 id="自动转换"><a href="#自动转换" class="headerlink" title="自动转换"></a>自动转换</h3><p>自动转换是以强制转换为基础的。<br>遇到以下三种情况时，JavaScript 会自动转换数据类型，即转换是自动完成的。</p>
+<p>（1）不同类型的数据互相运算。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">123 + &apos;abc&apos; // &quot;123abc&quot;</div></pre></td></tr></table></figure>
+<p>（2）对非布尔值类型的数据求布尔值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if (&apos;abc&apos;) &#123;</div><div class="line">  console.log(&apos;hello&apos;)</div><div class="line">&#125;  // &quot;hello&quot;</div></pre></td></tr></table></figure>
+<p>(3)对非数值类型的值使用一元运算符（即+和-）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">+ &#123;foo: &apos;bar&apos;&#125; // NaN</div><div class="line">- [1, 2, 3] // NaN</div></pre></td></tr></table></figure>
+<p>建议在预期为布尔值、数值、字符串的地方，全部使用Boolean、Number和String函数进行显式转换。</p>
+<ul>
+<li>自动转换为数值<br>除加法运算符(+)有可能把运算子转为字符串，其他运算符都会把运算转为数值。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&apos;5&apos; - &apos;2&apos; // 3</div><div class="line">&apos;5&apos; * &apos;2&apos; // 10</div><div class="line">true - 1  // 0</div><div class="line">false - 1 // -1</div><div class="line">&apos;1&apos; - 1   // 0</div><div class="line">&apos;5&apos; * []    // 0</div><div class="line">false / &apos;5&apos; // 0</div><div class="line">&apos;abc&apos; - 1   // NaN</div><div class="line">null + 1 // 1</div><div class="line">undefined + 1 // NaN</div><div class="line"></div><div class="line">上面代码中，运算符两侧的运算子，都被转成了数值。</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：null转为数值时为0，而undefined转为数值时为NaN。</p>
+</blockquote>
+<p>一元运算符也会把运算子转成数值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">+&apos;abc&apos; // NaN</div><div class="line">-&apos;abc&apos; // NaN</div><div class="line">+true // 1</div><div class="line">-false // 0</div></pre></td></tr></table></figure>
+<ul>
+<li>自动转换为布尔值 Boolean</li>
+</ul>
+<p><code>Boolean</code>函数可以将任意类型的值转为布尔值。<br>除了以下五个值的转换结果为false，其他的值全部为true。</p>
+<blockquote>
+<p>undefined<br>null<br>-0或+0<br>NaN<br>‘ ‘ (空字符串)</p>
+</blockquote>
+<ul>
+<li>自动转为字符串<br>字符串的自动转换，主要发生在字符串的加法运算时。当一个值为字符串，另一个值为非字符串，则后者转为字符串。<br>方法： 1. ‘ ‘ + x 、 2. window.String() 、  3. x.toString()。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&apos;5&apos; + 1 // &apos;51&apos;</div><div class="line">&apos;5&apos; + true // &quot;5true&quot;</div><div class="line">&apos;5&apos; + false // &quot;5false&quot;</div><div class="line">&apos;5&apos; + &#123;&#125; // &quot;5[object Object]&quot;</div><div class="line">&apos;5&apos; + [] // &quot;5&quot;</div><div class="line">&apos;5&apos; + function ()&#123;&#125; // &quot;5function ()&#123;&#125;&quot;</div><div class="line">&apos;5&apos; + undefined // &quot;5undefined&quot;</div><div class="line">&apos;5&apos; + null // &quot;5null&quot;</div></pre></td></tr></table></figure>
+<h4 id="内存图与垃圾回收"><a href="#内存图与垃圾回收" class="headerlink" title="内存图与垃圾回收"></a>内存图与垃圾回收</h4><h4 id="深复制"><a href="#深复制" class="headerlink" title="深复制"></a>深复制</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = 1</div><div class="line">var b = a</div><div class="line">b = 2  //这个时候改变b</div><div class="line">a 完全不受b的影响</div><div class="line">那么我们就说这是一个深复制。</div><div class="line">对于简单类型的数据来说，赋值就是深拷贝。</div><div class="line">对于复杂类型的数据（对象）来说才需要区分深拷贝和浅拷贝。</div></pre></td></tr></table></figure>
+<p>深拷贝:就是对 Heap 内存进行完全的拷贝。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = &#123;name: &apos;frank&apos;&#125;</div><div class="line">var b = deepClone(a) // deepClone 还不知道怎么实现</div><div class="line">b.name = &apos;b&apos;</div><div class="line">a.name === &apos;a&apos; // true</div></pre></td></tr></table></figure>
+<p>浅拷贝</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var a = &#123;name: &apos;frank&apos;&#125;</div><div class="line">var b = a</div><div class="line">b.name = &apos;b&apos;</div><div class="line">a.name === &apos;b&apos;   //true</div><div class="line">因为对b操作后，a也变了。</div></pre></td></tr></table></figure>
+<p><strong>文章著作权归irwenjing所有，转载须说明来源</strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JS//" class="article-tag-list-link color3">JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/04/JS数据类型的转换/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JS的数据类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
