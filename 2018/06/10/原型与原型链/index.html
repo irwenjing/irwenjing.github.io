@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/6 | irwenjing&#39;s blog</title>
+  <title>原型与原型链 | irwenjing&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="像风一样自由">
-<meta property="og:type" content="website">
-<meta property="og:title" content="irwenjing's blog">
-<meta property="og:url" content="http://yoursite.com/archives/2018/06/index.html">
+  <meta name="description" content="原型(prototype)在JavaScript中，原型（prototype）也是一个对象，通过原型可以实现对象的属性继承，JavaScript的对象中都包含了一个prototype内部属性，这个属性所对应的就是该对象的原型。prototype作为对象的内部属性，是不能被直接访问的。所以为了方便查看一个对象的原型，Firefox和Chrome中提供了  proto  这个非标准（不是所有浏览器都支">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原型与原型链">
+<meta property="og:url" content="http://yoursite.com/2018/06/10/原型与原型链/index.html">
 <meta property="og:site_name" content="irwenjing's blog">
-<meta property="og:description" content="像风一样自由">
+<meta property="og:description" content="原型(prototype)在JavaScript中，原型（prototype）也是一个对象，通过原型可以实现对象的属性继承，JavaScript的对象中都包含了一个prototype内部属性，这个属性所对应的就是该对象的原型。prototype作为对象的内部属性，是不能被直接访问的。所以为了方便查看一个对象的原型，Firefox和Chrome中提供了  proto  这个非标准（不是所有浏览器都支">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3753845-f83aaef0f90b2d3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-06-10T07:40:53.596Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="irwenjing's blog">
-<meta name="twitter:description" content="像风一样自由">
+<meta name="twitter:title" content="原型与原型链">
+<meta name="twitter:description" content="原型(prototype)在JavaScript中，原型（prototype）也是一个对象，通过原型可以实现对象的属性继承，JavaScript的对象中都包含了一个prototype内部属性，这个属性所对应的就是该对象的原型。prototype作为对象的内部属性，是不能被直接访问的。所以为了方便查看一个对象的原型，Firefox和Chrome中提供了  proto  这个非标准（不是所有浏览器都支">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/3753845-f83aaef0f90b2d3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="irwenjing&#39;s blog" type="application/atom+xml">
   
@@ -152,37 +156,89 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-原型与原型链" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      原型与原型链
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/10/原型与原型链/" class="archive-article-date">
+
+        
+        <a href="/2018/06/10/原型与原型链/" class="archive-article-date">
   	<time datetime="2018-06-10T07:41:35.563Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/10/原型与原型链/">原型与原型链</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="原型-prototype"><a href="#原型-prototype" class="headerlink" title="原型(prototype)"></a>原型(prototype)</h3><p>在JavaScript中，原型（prototype）也是一个对象，通过原型可以实现对象的属性继承，JavaScript的对象中都包含了一个<code>prototype</code>内部属性，这个属性所对应的就是该对象的原型。<br><code>prototype</code>作为对象的内部属性，是不能被直接访问的。所以为了方便查看一个对象的原型，Firefox和Chrome中提供了 <strong> proto</strong>  这个非标准（不是所有浏览器都支持）的访问器（ECMA引入了标准对象原型访问器 Object.getPrototype(object)）。在JavaScript的原型对象中，还包含了一个<code>constructior</code>属性，这个属性对应创建所有指向改原型的实例的构造函数。</p>
+<h4 id="原型（prototype）作用"><a href="#原型（prototype）作用" class="headerlink" title="原型（prototype）作用"></a>原型（prototype）作用</h4><p>通过构造函数为实例对象定义属性，虽然很方便，但是有一个缺点。同一个构造函数的多个实例之间，无法共享属性，从而造成对系统资源的浪费。<br>JavaScript 继承机制的设计思想就是，原型对象的所有属性和方法，都能被实例对象共享。也就是说，如果属性和方法定义在原型上，那么所有实例对象就能共享，不仅节省了内存，还体现了实例对象之间的联系。</p>
+<blockquote>
+<p>JavaScript规定，每个函数都有一个<code>prototype</code>属性，指向一个对象。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">function f() &#123;&#125;</div><div class="line">typeof f.prototype  // &quot;object&quot;</div></pre></td></tr></table></figure>
+<p>上面代码中，函数f默认具有prototype属性，指向一个对象。</p>
+<p>对于普通函数来说，该属性基本无用。但是，对于构造函数来说，生成实例的时候，该属性会自动成为实例对象的原型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function Animal(name)&#123;</div><div class="line">  this.name = name;</div><div class="line">&#125;</div><div class="line">Animal.prototype.color = &apos;white&apos;;</div><div class="line"></div><div class="line">var cat1 = new Animal(&apos;大猫&apos;)；</div><div class="line">var cat2 = new Animal(&apos;二猫&apos;)；</div><div class="line"></div><div class="line">cat1.color   // &apos;white&apos;</div><div class="line">cat2.color  // &apos;white&apos;</div><div class="line"></div><div class="line">上面代码中，构造函数Animal的prototype属性，就是实例对象cat1和cat2的原型对象。</div><div class="line">原型对象上天骄一个color属性,结果实例对象都共享了该属性。</div></pre></td></tr></table></figure>
+<p>原型对象的属性不是实例对象自身的属性。只要修改原型对象，变动就立刻会体现在所有实例对象上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Animal.prototype.color = &apos;yellow&apos;;</div><div class="line"></div><div class="line">cat1.color   // &apos;yellow&apos;</div><div class="line">cat2.color  // &apos;yellow&apos;</div><div class="line"></div><div class="line">上面代码中，原型对象的color属性的值变为yellow，两个实例对象的color属性立刻跟着变了。</div><div class="line">这是因为实例对象其实没有color属性，都是读取原型对象的color属性。</div><div class="line">也就是说，当实例对象本身没有某个属性或方法的时候，它会到原型对象去寻找该属性或方法。这就是原型对象的特殊之处。</div></pre></td></tr></table></figure>
+<p>如果实例对象自身就有某个属性或方法，它就不会再去原型对象寻找这个属性或方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cat1.color = &apos;black&apos;;</div><div class="line">cat1.color  //&apos;black&apos;</div><div class="line">cat2.color  // &apos;yellow&apos;</div><div class="line">Animal.prototype.color  //&apos;yellow&apos;</div><div class="line">上面代码中，实例对象cat1的color属性改为black，就使得它不再去原型对象读取color属性，后者的值依然为yellow。</div></pre></td></tr></table></figure>
+<p><strong>原型对象的作用，就是定义所有实例对象共享的属性和方法。这也是它被称为原型对象的原因，而实例对象可以视作从原型对象衍生出来的子对象。</strong></p>
+<h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><p>原型链的基本思想是利用原型让一个引用类型继承另一个引用类型的属性和方法。因为每个对象和原型都有原型，对象的原型指向原型对象，而父的原型又指向父的父，这种原型层层连接起来的就构成了原型链（prototype chain）。</p>
+<ul>
+<li>构造函数、原型和实例的关系：<br>每个构造函数都有一个原型对象，原型对象包含一个指向构造函数的指针（prototype），而实例则包含一个指向原型对象的内部指针（<strong> proto </strong>）。</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/3753845-f83aaef0f90b2d3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原型链.png"></p>
+<p>如果一层层地上溯，所有对象的原型最终都可以上溯到Object.prototype，即Object构造函数的prototype属性。也就是说，所有对象都继承了Object.prototype的属性。这就是所有对象都有valueOf和toString方法的原因，因为这是从Object.prototype继承的。</p>
+<p>那么，Object.prototype对象有没有它的原型呢？回答是Object.prototype的原型是null。null没有任何属性和方法，也没有自己的原型。因此，原型链的尽头就是null。</p>
+<p><strong>注意，一级级向上，在整个原型链上寻找某个属性，对性能是有影响的。所寻找的属性在越上层的原型对象，对性能的影响越大。如果寻找某个不存在的属性，将会遍历整个原型链。</strong></p>
+<p><strong><em> proto</em> 和 prototype的区别是？</strong></p>
+<p><strong>一句话：<em> proto</em>是对象的属性；prototype是函数的属性</strong></p>
+<ol>
+<li>不能断章取义，<em> proto</em> 和 prototype只是两个key而已</li>
+<li>我们一般研究对象的<strong> proto</strong>和函数的prototype</li>
+<li>对象.<strong> proto</strong> === 某函数.prototype</li>
+<li>如果把函数看成对象，那么函数.<strong> proto</strong> === Function.prototype</li>
+<li>如果把 Function 看成对象，那么 Function.<strong> proto</strong> === Function.prototype</li>
+<li>Function.prototype.<em> proto</em> == Object.prototype</li>
+</ol>
+<p><strong>文章著作权归饥人谷_sunny和饥人谷所有，转载须说明来源</strong></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -195,93 +251,119 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/06/10/原型与原型链/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/04/JS数据类型的转换/" class="archive-article-date">
-  	<time datetime="2018-06-04T03:53:48.624Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/06/04/JS数据类型的转换/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JS数据类型的转换
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/04/JS数据类型的转换/">JS数据类型的转换</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JS//" class="article-tag-list-link color3">JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/01/JS的数据类型/" class="archive-article-date">
-  	<time datetime="2018-06-01T08:39:55.102Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-01</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/01/JS的数据类型/">JS的数据类型</a>
-    </h1>
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2018/06/10/原型与原型链/", 
+    sourceId: "原型与原型链",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JS//" class="article-tag-list-link color3">JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -304,8 +386,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
